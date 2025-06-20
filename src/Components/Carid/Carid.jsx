@@ -17,7 +17,7 @@ const Carid = () => {
   const nevegetion = useNavigate();
   useEffect(() => {
 
-    axios.get("Data.json")
+    axios.get("http://localhost:5000/listings")
     .then((response) => {
       const data = response.data;
       setData(data);
@@ -28,9 +28,9 @@ const Carid = () => {
 
 
   }, []);
-  const handleClick = (id) => {
+  const handleClick = (_id) => {
    
-    nevegetion(`/CaridDitels/${id}`);
+    nevegetion(`/CaridDitels/${_id}`);
     <CaridDitels  />;
     
 
@@ -49,7 +49,7 @@ const searchfiltar = pricefiltar.filter(item => item.title.toLowerCase().include
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-x-56 gap-y-6 ">
       {searchfiltar.map((item, idx) => (
-        <div onClick={()=>handleClick(item.id)}  key={idx} className="w-52  rounded-b-2xl cursor-pointer shadow-lg">
+        <div onClick={()=>handleClick(item._id)}  key={idx} className="w-52  rounded-b-2xl cursor-pointer shadow-lg">
           <figure>
             <img
               className="w-full rounded-t-3xl mx-auto h-52 object-cover"

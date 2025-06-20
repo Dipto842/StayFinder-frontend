@@ -7,6 +7,10 @@ import Home from "./Components/Pages/Home";
 import CaridDitels from "./Components/Carid/CaridDitels";
 import Login from "./Components/Login & Register/Login";
 import Register from "./Components/Login & Register/Register";
+import Dashboard from "./Components/HostDashboard/Dashboard";
+import Add from "./Components/HostDashboard/Add";
+import ManageListings from "./Components/HostDashboard/ManageListings";
+import Edit from "./Components/HostDashboard/Edit";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +27,10 @@ const router = createBrowserRouter([
         element:<CaridDitels></CaridDitels>
     
   },
+  {
+    path:'/edit',
+    element:<Edit></Edit>
+  }
     ]
 
   },
@@ -33,6 +41,21 @@ const router = createBrowserRouter([
   {
 path:"/Register",
 element:<Register></Register>
+  },
+  {
+    path:"Dashboard",
+    element:<Dashboard></Dashboard>,
+    children:[
+{
+  path:"add",
+  element:<Add></Add>,
+
+},
+{
+path:'Manage',
+element:<ManageListings></ManageListings>
+}
+    ]
   }
 
 

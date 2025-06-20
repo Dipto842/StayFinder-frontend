@@ -1,17 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./card.css";
-import { IoLocationOutline } from "react-icons/io5"; // Assuming you have a CSS file for styling
+
+import axios from "axios";
+import BookingForm from "./BookingForm";
+import { AuthContext } from "../firebase/Authentication";
 const CaridDitels = () => {
   const { id } = useParams();
   const [data, setData] = useState([]);
-
+const {user}=useContext(AuthContext); 
   useEffect(() => {
-    fetch("/Data.json")
-      .then((res) => res.json())
+    axios.get(`http://localhost:5000/listings/${id}`)
+     
       .then((data) => {
-        const item = data.find((item) => item.id === parseInt(id));
-        setData(item);
+       
+        setData(data.data);
       });
   }, [id]);
 
@@ -31,20 +34,7 @@ const CaridDitels = () => {
       </div>
 
       {/* Right: Booking Card with Calendar */}
-      <div className="border rounded-lg p-6 bg-gray-50 shadow-sm">
-        <h3 className="text-xl font-semibold mb-4">Book This Stay</h3>
-        <label className="block mb-1">Check-in:</label>
-        <input
-          type="date"
-          className="input input-bordered w-full mb-3"
-        />
-        <label className="block mb-1">Check-out:</label>
-        <input
-          type="date"
-          className="input input-bordered w-full mb-3"
-        />
-        <button className="btn btn-primary w-full mt-2">Book Now</button>
-      </div>
+    <BookingForm listingId={data._id} userEmail={user?.email} ></BookingForm>
     </div>
   );
 };

@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../firebase/Authentication";
 import Swal from "sweetalert2";
+import axios from "axios";
 
 
 
@@ -14,21 +15,32 @@ const navegate = useNavigate();
         register,
         handleSubmit,
     
-        formState: { errors },
+        
       } = useForm();
     
-      const onSubmit = (data) => {
+      const onSubmit = async(data) => {
         registerUser(data.email, data.password)
-          .then((userCredential) => {
+          .then(async (userCredential) => {
             // Signed in 
             const user = userCredential.user;
             console.log("User registered successfully:", user);
             if(user.accessToken){
+
  Swal.fire({
   title: "registered Successfully",
   icon: "success",
   draggable: true
+
 });
+const userData= {
+              fullName: data.fullName,
+              phoneNumber: data.phoneNumber,  
+              email: data.email,
+              role: data.role,
+              uid: user.uid,
+
+}
+ await axios.post('http://localhost:5000/users', userData)
 navegate('/')
             }
            

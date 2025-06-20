@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../firebase/Authentication";
 import Swal from "sweetalert2";
 
+
 const Login = () => {
     const {loginUser} = useContext(AuthContext);
     const navegate = useNavigate();
@@ -11,21 +12,22 @@ const Login = () => {
     register,
     handleSubmit,
 
-    formState: { errors },
+    
   } = useForm();
 
-  const onSubmit = (data) => {
-    loginUser(data.email, data.password)
-      .then(() => {   
-     Swal.fire({
-  title: "Login Successful",
-  icon: "success",
-  draggable: true
-});
-navegate('/')
-        })
-    console.log(data);
-  };
+  const onSubmit = async(data) => {
+  loginUser(data.email, data.password)
+    .then(async () => {   
+      Swal.fire({
+        title: "Login Successful",
+        icon: "success",
+        draggable: true
+      });
+    
+      navegate('/');
+    });
+  console.log(data);
+};
 
   return (
     <div>
