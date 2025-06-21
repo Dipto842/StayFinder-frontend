@@ -1,84 +1,47 @@
-✅ StayFinder – A Full Stack Web App Like Airbnb
-StayFinder is a MERN-stack (MongoDB, Express, React, Node) based full-stack web app, inspired by Airbnb. Users can browse, list, and book properties for short- or long-term stays. Built as part of a full-stack intern assignment.
 
-🔗 Live Links
-Frontend: stay-finder-frontend-one.vercel.app
+🏠 StayFinder – A Full Stack Web App Like Airbnb
 
-Backend: stayfinder-sarvar.onrender.com
 
-🛠️ Tech Stack
-Frontend:
-React.js (Vite)
 
-React Router
 
-Tailwind CSS
+🚀 Project Overview
+StayFinder is a full-stack MERN-based web application inspired by Airbnb. Users can list, browse, and book properties. Built for internship evaluation, it demonstrates both frontend and backend skills.
 
-Firebase Authentication
 
-Axios
 
-Backend:
-Node.js
+🛠 Tech Stack
+Layer	Technologies
+Frontend	React, React Router, Tailwind CSS, Firebase Auth
+Backend	Node.js, Express.js, MongoDB
+Tools	Vercel, Render, dotenv, Axios
 
-Express.js
 
-MongoDB (Atlas)
+🔑 Features
+🔐 Firebase login/register
 
-dotenv for config
 
-📦 Features
-🔐 Authentication
-Firebase login/register
+🏘 Listings CRUD for hosts
 
-Role-based UI (user/host)
+🗓 Booking system for users
 
-🏠 Listings
-View all properties
+📁 Dashboards for both users and hosts
 
-View single listing details
 
-Host can add/edit/delete own listings
 
-📅 Bookings
-Users can book properties
 
-Bookings stored in MongoDB
+🌐 Live Links
+🔗 Frontend: https://stay-finder-frontend-one.vercel.app
 
-View all bookings
+🔗 Backend: https://stayfinder-sarvar.onrender.com
 
-🧑 Dashboards
-User Dashboard: View bookings
+🗂 Frontend GitHub Repo: github.com/Dipto842/StayFinder-frontend
 
-Host Dashboard: Manage listings
+🗂 Backend GitHub Repo: github.com/Dipto842/StayFinder-sarvar
 
-📁 Project Structure
-bash
-Copy
-Edit
-stayfinder-frontend/
-├── components/
-├── pages/
-├── contexts/
-├── App.jsx
-└── main.jsx
 
-stayfinder-backend/
-├── routes/
-├── models/
-├── server.js
-└── .env
-📌 Future Improvements
- Map integration (Google/Leaflet)
 
- Payment system (Stripe)
-
- Filters by location, date, price
-
- JWT-based protected routes (optional)
-
-📝 Setup Instructions
-🖥️ Frontend:
+📦 Setup Instructions
+🔧 Frontend
 bash
 Copy
 Edit
@@ -86,29 +49,32 @@ git clone https://github.com/Dipto842/StayFinder-frontend
 cd StayFinder-frontend
 npm install
 npm run dev
-💾 Backend:
+🧩 Backend
 bash
 Copy
 Edit
 git clone https://github.com/Dipto842/StayFinder-sarvar
 cd StayFinder-sarvar
 npm install
-touch .env  # Add your MongoDB credentials
+touch .env    # Add MongoDB credentials
 node server.js
-🙋 Submitted As
-Intern assignment for StayFinder (2025)
+💡 Bonus Suggestions
+✅ Map view with location markers
 
-📅 Timeline
-Assigned: June 13, 2025
+✅ Price, location, date filters
 
-Submitted: June 20, 2025 ✅
+✅ Stripe payment (future)
 
-👤 Developer
-Name: Dipto Bakshi
+✅ JWT auth for secured APIs
 
-Email: diptobakshi72@gmail.com
-
-Phone: +8801791620986
+📄 Submission Details
+Info	Detail
+🧑 Name	Dipto Bakshi
+📧 Email	diptobakshi72@gmail.com
+📞 Phone	+8801791620986
+📅 Assigned	13 June 2025
+📅 Submitted	20 June 2025
 
 ✅ License
-This project is for educational and assignment purposes.
+This is an intern assignment project, submitted to StayFinder, 2025.
+
