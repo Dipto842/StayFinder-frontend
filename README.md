@@ -1,12 +1,114 @@
-# React + Vite
+✅ StayFinder – A Full Stack Web App Like Airbnb
+StayFinder is a MERN-stack (MongoDB, Express, React, Node) based full-stack web app, inspired by Airbnb. Users can browse, list, and book properties for short- or long-term stays. Built as part of a full-stack intern assignment.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🔗 Live Links
+Frontend: stay-finder-frontend-one.vercel.app
 
-Currently, two official plugins are available:
+Backend: stayfinder-sarvar.onrender.com
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🛠️ Tech Stack
+Frontend:
+React.js (Vite)
 
-## Expanding the ESLint configuration
+React Router
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Tailwind CSS
+
+Firebase Authentication
+
+Axios
+
+Backend:
+Node.js
+
+Express.js
+
+MongoDB (Atlas)
+
+dotenv for config
+
+📦 Features
+🔐 Authentication
+Firebase login/register
+
+Role-based UI (user/host)
+
+🏠 Listings
+View all properties
+
+View single listing details
+
+Host can add/edit/delete own listings
+
+📅 Bookings
+Users can book properties
+
+Bookings stored in MongoDB
+
+View all bookings
+
+🧑 Dashboards
+User Dashboard: View bookings
+
+Host Dashboard: Manage listings
+
+📁 Project Structure
+bash
+Copy
+Edit
+stayfinder-frontend/
+├── components/
+├── pages/
+├── contexts/
+├── App.jsx
+└── main.jsx
+
+stayfinder-backend/
+├── routes/
+├── models/
+├── server.js
+└── .env
+📌 Future Improvements
+ Map integration (Google/Leaflet)
+
+ Payment system (Stripe)
+
+ Filters by location, date, price
+
+ JWT-based protected routes (optional)
+
+📝 Setup Instructions
+🖥️ Frontend:
+bash
+Copy
+Edit
+git clone https://github.com/Dipto842/StayFinder-frontend
+cd StayFinder-frontend
+npm install
+npm run dev
+💾 Backend:
+bash
+Copy
+Edit
+git clone https://github.com/Dipto842/StayFinder-sarvar
+cd StayFinder-sarvar
+npm install
+touch .env  # Add your MongoDB credentials
+node server.js
+🙋 Submitted As
+Intern assignment for StayFinder (2025)
+
+📅 Timeline
+Assigned: June 13, 2025
+
+Submitted: June 20, 2025 ✅
+
+👤 Developer
+Name: Dipto Bakshi
+
+Email: diptobakshi72@gmail.com
+
+Phone: +8801791620986
+
+✅ License
+This project is for educational and assignment purposes.
