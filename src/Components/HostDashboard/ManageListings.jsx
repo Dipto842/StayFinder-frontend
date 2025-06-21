@@ -15,7 +15,7 @@ const ManageListings = () => {
  
     useEffect(()=>{
 const fetchListings = async () => {
- await   axios.get('http://localhost:5000/listings')
+ await   axios.get('https://stayfinder-sarvar.onrender.com/listings')
         .then(response => {
             const listings = response.data;
             
@@ -37,7 +37,7 @@ const UserData =  myListings.filter(listing => listing.hostEmail === user?.email
 
 const handleDelete = async (_id) => {
   try { 
-    await axios.delete(`http://localhost:5000/listings/${_id}`);
+    await axios.delete(`https://stayfinder-sarvar.onrender.com/listings/${_id}`);
     setMyListings(UserData.filter(listing => listing._id !== _id));  
     alert('Listing deleted successfully');
   } catch (error) {

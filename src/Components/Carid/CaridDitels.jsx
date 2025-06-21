@@ -10,7 +10,7 @@ const CaridDitels = () => {
   const [data, setData] = useState([]);
 const {user}=useContext(AuthContext); 
   useEffect(() => {
-    axios.get(`http://localhost:5000/listings/${id}`)
+    axios.get(`https://stayfinder-sarvar.onrender.com/listings/${id}`)
      
       .then((data) => {
        

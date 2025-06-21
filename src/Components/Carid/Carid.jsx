@@ -17,7 +17,7 @@ const Carid = () => {
   const nevegetion = useNavigate();
   useEffect(() => {
 
-    axios.get("http://localhost:5000/listings")
+    axios.get("https://stayfinder-sarvar.onrender.com/listings")
     .then((response) => {
       const data = response.data;
       setData(data);

@@ -18,7 +18,7 @@ const BookingForm = ({ listingId, userEmail }) => {
     };
 
     try {
-      const res = await axios.post("http://localhost:5000/bookings", bookingData);
+      const res = await axios.post("https://stayfinder-sarvar.onrender.com/bookings", bookingData);
       if (res.status === 200 || res.status === 201) {
         alert("Booking successful!");
         reset();

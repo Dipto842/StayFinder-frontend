@@ -40,7 +40,7 @@ const userData= {
               uid: user.uid,
 
 }
- await axios.post('http://localhost:5000/users', userData)
+ await axios.post('https://stayfinder-sarvar.onrender.com/users', userData)
 navegate('/')
             }
            

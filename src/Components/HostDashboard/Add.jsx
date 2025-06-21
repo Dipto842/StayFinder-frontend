@@ -20,13 +20,13 @@ const Add = () => {
   const onSubmit =async (data) => {
     console.log("Listing Data:", data);
    
-    // fetch('http://localhost:5000/listings', {
+    // fetch('https://stayfinder-sarvar.onrender.com/listings', {
     //   method: 'POST',
     //   headers: { 'Content-Type': 'application/json' },
     //   body: JSON.stringify(data)
     // }).then(res => res.json())
     // .then(result => console.log(result));
-await axios.post('http://localhost:5000/listings', data)
+await axios.post('https://stayfinder-sarvar.onrender.com/listings', data)
       .then(response => {   
         console.log("Listing added successfully:", response.data);
         // Show success message or redirect

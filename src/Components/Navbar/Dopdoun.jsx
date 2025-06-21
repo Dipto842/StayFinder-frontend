@@ -19,7 +19,7 @@ logout()
       });
     }
       useEffect(() => {
-    axios.get(`http://localhost:5000/users`)
+    axios.get(`https://stayfinder-sarvar.onrender.com/users`)
      
       .then((data) => {
      
